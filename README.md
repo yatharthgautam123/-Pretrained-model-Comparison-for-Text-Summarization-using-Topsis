@@ -18,18 +18,19 @@ Text summarization is a crucial natural language processing task that involves c
 ## Key Features:
 
 1. **Metrics Considered:**
-   - The comparison is based on essential metrics, including Rouge scores, length of the summary, and training time. Rouge scores assess the quality of the generated summaries, while length and training time provide insights into efficiency and resource requirements.
-
+   - The comparison is based on essential metrics, including BLEU Score, Semantic Coherence, Factual Accuracy, and Content Coverage.
+     
 2. **Methodology - TOPSIS:**
    - The Technique for Order of Preference by Similarity to Ideal Solution (TOPSIS) method is employed for the comparison. This method considers both the similarity to the ideal solution and the dissimilarity to the negative ideal solution, providing a comprehensive ranking.
 
 3. **Models Evaluated:**
-   - Real-world pretrained models, such as BERTSumExt, GPT-3, T5, XLNet, BART, and Pegasus, are included in the comparison. These models are widely used in text summarization tasks.
+   - Real-world pre-trained models, such as facebook/bart-large-cnn, t5-large, sshleifer/distilbart-cnn-12-6, google/pegasus-large and allenai/led-large-16384-arxiv, are included in the comparison. These models are widely used in text summarization tasks.
 
 ## Project Structure:
 
-- **`data.csv`**: CSV file containing evaluation metrics for each model.
-- **`result.csv`**: CSV file with ranked results in tabular format.
+- **`train.csv`**: CSV file containing training data.
+- **`evaluation_results.csv`**: CSV file containing evaluation metrics for each model.
+- **`topsis_results.csv`**: CSV file with ranked results in tabular format.
 
 ## How to Run:
 
@@ -41,14 +42,13 @@ Text summarization is a crucial natural language processing task that involves c
 1. **Ranked Table:**
 - Explore detailed ranked results in summarization_table_result.csv:
 
-| **Model**   | **Rouge Scores**  | **Length of Summary** | **Training Time** |
-|-------------|-------------------|-----------------------|-------------------|
-| BERTSumExt  | 0.75              | 130                   | 9                 |
-| GPT-3       | 0.82              | 150                   | 12                |
-| T5          | 0.78              | 140                   | 10                |
-| XLNet       | 0.76              | 135                   | 11                |
-| BART        | 0.80              | 145                   | 8                 |
-| Pegasus     | 0.79              | 138                   | 13                |
+| **Model**                        | **BLEU Score**   | **Semantic Coherence**| **Factual Accuracy**| **Content Coverage** |
+|----------------------------------|------------------|-----------------------|---------------------|----------------------|
+| facebook/bart-large-cnn          |0.348812198315615 |0.655735972296425      |0.458348647372745    |0.371619325675868     |
+| t5-large                         |0.339787619680929 |0.755253974199994      |0.457264601997934    |0.408908353539881     |
+| sshleifer/distilbart-cnn-12-6    |0.305259455039259 |0.708327446474822      |0.521720904293639    |0.483918843036832     |
+| google/pegasus-large             |0.361715316003006 |0.70710365712162       |0.420561581466909    |0.363004447339982     |
+| allenai/led-large-16384-arxiv    |0.152972697190969 |0.243868179930235      |0.284098502397507    |0.186362323986993     |
 
 
 
