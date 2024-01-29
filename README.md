@@ -39,8 +39,8 @@ Text summarization is a crucial natural language processing task that involves c
    git clone https://github.com/yatharthgautam123/-Pretrained-model-Comparison-for-Text-Summarization-using-Topsis.git
 
 ## Results and Analysis:
-1. **Ranked Table:**
-- Explore detailed ranked results in summarization_table_result.csv:
+1. **Evaluation Metrics Table:**
+- Explore detailed ranked results in evaluation_results.csv:
 
 | **Model**                        | **BLEU Score**   | **Semantic Coherence**| **Factual Accuracy**| **Content Coverage** |
 |----------------------------------|------------------|-----------------------|---------------------|----------------------|
@@ -50,19 +50,6 @@ Text summarization is a crucial natural language processing task that involves c
 | google/pegasus-large             |0.361715316003006 |0.70710365712162       |0.420561581466909    |0.363004447339982     |
 | allenai/led-large-16384-arxiv    |0.152972697190969 |0.243868179930235      |0.284098502397507    |0.186362323986993     |
 
-
-
-## Analysis:
-**Model Performance:**
-GPT-3 outperforms other models in terms of Rouge scores, securing the top rank.
-BERTSumExt and T5 follow closely, showcasing competitive performance.
-Efficiency Consideration:
-BERTSumExt is the most resource-efficient, with the lowest training time.
-BART and T5 offer a balanced trade-off between Rouge scores and efficiency.
-Next Steps:
-Feel free to analyze the provided CSV files for more insights.
-Consider adjusting the evaluation metrics or adding new models based on your specific use case.
-Use the project as a foundation for ongoing research and development in text summarization.
 
 
 # MIT License
